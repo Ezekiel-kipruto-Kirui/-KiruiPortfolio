@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Kirui - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #3b82f6;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #2563eb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-container {
+                
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .site-title {
+                font-size: 1.0rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .nav-buttons {
+               
+                gap: 0.3rem;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div>
+              <div class="userimage">
+                <img src="" alt="">
+              </div>
+                <h1 class="site-title">Ezekiel Kirui</h1>
+             </div>
+            <nav class="nav-buttons">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 text-center">
+             <!-- Placeholder for Profile Image -->
+             <div class="flex justify-center mb-6">
+                <!-- Add your image source in the 'src' attribute -->
+                <img src="path/to/your-image.jpg" alt="" class="rounded-full w-40 h-40 shadow-lg object-cover">
+            </div>
+            <!-- Text Content -->
+            <h1 class="text-4xl font-bold text-blue-700 mb-4">Welcome to kiruisoftwaresolutions</h1>
+            <p class="text-gray-700 text-lg mb-6">I'm Ezekiel Kirui, a passionate expert in web development, AI, and software engineering.</p>
+            
+           
+            
+            <!-- Optional Additional Text -->
+            
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-blue-700">About Me</h2>
+            <p class="text-gray-700 leading-relaxed max-w-xl mx-auto">
+                Hi, I'm Ezekiel Kirui, a passionate web developer with strong skills in JavaScript, CSS, and HTML. 
+                I have expertise in Python backend development and am also a skilled Photoshop graphic designer. 
+                My goal is to create beautiful, functional, and dynamic web solutions that meet my clients' needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section with Flashing Animation -->
+    <section id="skills" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-8 text-blue-700">My Skills</h2>
+            <div id="skills-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Web Development -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Web Development</h3>
+                    <p class="text-gray-700">JavaScript, CSS, HTML</p>
+                    <p class="text-gray-600 mt-2">Building interactive, responsive websites using modern technologies.</p>
+                </div>
+                <!-- Python Backend -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Python Backend</h3>
+                    <p class="text-gray-700">Django, Flask</p>
+                    <p class="text-gray-600 mt-2">Creating powerful backend systems and APIs with Python frameworks.</p>
+                </div>
+                <!-- Graphic Design -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Graphic Design</h3>
+                    <p class="text-gray-700">Photoshop</p>
+                    <p class="text-gray-600 mt-2">Designing visually appealing graphics for web and print media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-8 text-blue-700">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Project 1: Web Application</h3>
+                    <p class="text-gray-600">A responsive web application built with JavaScript, CSS, and HTML.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Project 2: Python Backend API</h3>
+                    <p class="text-gray-600">An API developed using Django, designed for managing business data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Contact information block -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Contact Me</h2>
+                <p class="text-gray-700 mb-6">Have a project in mind? Feel free to reach out!</p>
+                <p class="text-gray-700">Phone: +254 701396967</p>
+                <p class="text-gray-700">Email: ezekielkirui62@gmail.com</p>
+            </div>
+            
+            <!-- Button block with added margin-top -->
+            <div class="mt-20"> <!-- Adjusted to create space between sections -->
+                <a href="mailto:ezekielkirui62@gmail.com" 
+                   class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600 transition duration-300">
+                   Email Me
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Ezekiel Kirui. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Slower Flashing Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const skills = document.getElementById('skills-list');
+            const skillItems = skills.children;
+
+            for (let i = 0; i < skillItems.length; i++) {
+                skillItems[i].style.animation = `flash 3s ${i * 0.8}s ease-in-out infinite`;
+            }
+        });
+    </script>
+</body>
+</html>

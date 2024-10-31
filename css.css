@@ -1,0 +1,209 @@
+/* General styles */
+body {
+    background-color: #f7fafc;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background-color: #3b82f6;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* About Section */
+section {
+    padding: 3rem 0;
+}
+
+section h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section p {
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Skills Section */
+#skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    #skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.skill-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    color: #4b5563;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Portfolio Section */
+.portfolio-project {
+    background-color: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-project h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio-project h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Contact Section */
+.contact-info {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Email Button */
+.email-button {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .email-button {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #3b82f6;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Flashing Animation 
+@keyframes flash {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+    */
+
+#skills .skill-item {
+    animation: flash 3s ease-in-out infinite;
+}

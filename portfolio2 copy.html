@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Kirui - Portfolio</title>
+    
+    <style>
+        body{
+    font-family: arial;
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.header-container
+{
+    background-color: #011b3e;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+}
+
+.menubtn{
+    display: none;
+    background-color: transparent;
+    border: none;
+
+}
+.menu-icon{
+    width: 40px;
+    background-color: transparent;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-size: 1.75rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #011b3e;
+}
+.menudiv{
+    display: none;
+    background-color: #011b3e;
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 50;
+}
+.nav-buttons1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-link1{
+    display: flex;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Home Section */
+.home-section {
+    background:   #f9fafb;
+    color: #011b3e;
+    padding: 5rem 1rem;
+    text-align: center;
+    height: 600px;
+}
+
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-image-large:hover {
+    transform: scale(1.05);
+}
+
+.home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+.home-subtitle {
+    font-size: 1.25rem;
+    color: rgb(107, 107, 107);
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+    padding: 4rem 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #011b3e;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+    color: #4b5563;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #f9fafb;
+    padding: 4rem 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    color: #011b3e;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.skill-text {
+    color: #4b5563;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.skill-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f3f4f6;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #011b3e;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #011b3e;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #011b3e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+    .menudiv{
+        display: block;
+    }
+    .menubtn{
+        display: flex;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <button class="menubtn js-menubtn"><img class="menu-icon" src="menu.png" alt=""></button>
+            <div class="site-info">
+                <img src="Ezekiel1.png" class="profile-image">
+                <h1 class="site-title">Ezekiel Kirui</h1>
+            </div>
+            <nav class="nav-buttons">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+   
+    <div class="menudiv js-menudiv">
+        
+        <nav class="nav-buttons1">
+            <button class="hidediv" style="
+        position: relative;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        ">x</button>
+            <a href="#home" class="nav-link1">Home</a>
+            <a href="#about" class="nav-link1">About</a>
+            <a href="#skills" class="nav-link1">Skills</a>
+            <a href="#contact" class="nav-link1">Contact</a>
+        </nav>
+    </div>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="container text-center">
+            <div class="profile-img-container">
+                <img src="Ezekiel1.png" alt="Ezekiel Kirui" class="profile-image-large">
+            </div>
+            <h1 class="home-title">Welcome to Kirui Software Solutions</h1>
+            <p class="home-subtitle">I'm Ezekiel Kirui, a passionate expert in web development, AI, and software engineering.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container text-center">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                Hi, I'm Ezekiel Kirui, a passionate web developer with strong skills in JavaScript, CSS, and HTML. 
+                I have expertise in Python backend development and am also a skilled Photoshop graphic designer. 
+                My goal is to create beautiful, functional, and dynamic web solutions that meet my clients' needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container text-center">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 class="skill-title">Web Development</h3>
+                    <p class="skill-text">JavaScript, CSS, HTML</p>
+                    <p class="skill-description">Building interactive, responsive websites using modern technologies.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Python Backend</h3>
+                    <p class="skill-text">Django, Flask</p>
+                    <p class="skill-description">Creating powerful backend systems and APIs with Python frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Graphic Design</h3>
+                    <p class="skill-text">Photoshop</p>
+                    <p class="skill-description">Designing visually appealing graphics for web and print media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container text-center">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="contact-subtitle">Have a project in mind? Feel free to reach out!</p>
+            <p>Phone: +254 701396967</p>
+            <p>Email: ezekielkirui62@gmail.com</p>
+            <a href="mailto:ezekielkirui62@gmail.com" class="contact-button">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Ezekiel Kirui. All Rights Reserved.</p>
+    </footer>
+<script>
+    let menubtn1 = document.querySelector('.js-menubtn')
+let menudiv1 = document.querySelector('.js-menudiv')
+let hidedivbtn = document.querySelector('.hidediv')
+if(menudiv1){
+    menudiv1.style.display = 'none'
+}
+function tooglediv()
+{
+    if (menudiv1.style.display === 'none')
+        {
+            menudiv1.style.display = 'block'
+        }
+    
+}
+menubtn1.addEventListener('click',()=>{
+    tooglediv()
+})
+hidedivbtn.addEventListener('click',()=>{
+    if(menudiv1.style.display === 'block'){
+         menudiv1.style.display = 'none'
+    }
+})
+</script>
+</body>
+</html>
