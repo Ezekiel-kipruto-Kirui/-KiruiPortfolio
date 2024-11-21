@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Adobe Photoshop</title>
+  <style>
+    /* General Page Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    /* Container for content */
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    /* Heading styles */
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    /* Paragraph styling */
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Download Button styling */
+    #downloadButton {
+      background-color: #ff7f50;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #downloadButton:hover {
+      background-color: #ff6347;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Download Adobe Photoshop</h1>
+    <p>Click the button below to download Adobe Photoshop instantly.</p>
+    <button id="downloadButton">Download Now</button>
+    <footer>© 2024 YourWebsiteName. All rights reserved.</footer>
+  </div>
+
+  <script>
+    // Path to the ZIP file
+    const filePath = "Adobe_Photoshop_2020_v21.2.2.289x64_Multilingual.rar";
+
+    // Add click event listener to the button
+    document.getElementById("downloadButton").addEventListener("click", function () {
+      // Create a temporary <a> element
+      const downloadLink = document.createElement("a");
+      downloadLink.href = filePath;
+      downloadLink.download = "Adobe_Photoshop.zip";
+
+      // Trigger the download
+      downloadLink.click();
+    });
+  </script>
+</body>
+</html>
